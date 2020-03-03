@@ -1,0 +1,22 @@
+#/*============================================================================
+#
+#  : PHAS0100 Assignment 1 Linear Regression
+#
+#  Copyright (c) University College London (UCL). All rights reserved.
+#
+#  This software is distributed WITHOUT ANY WARRANTY; without even
+#  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+#  PURPOSE.
+#
+#  See LICENSE.txt in the top level directory for details.
+#
+#============================================================================*/
+
+set(_command_line_apps
+  lrgMyFirstApp
+)
+
+foreach(_app ${_command_line_apps})
+  add_executable(${_app} ${_app}.cpp)
+  target_link_libraries(${_app} ${_LIBRARIES} ${ALL_THIRD_PARTY_LIBRARIES})
+endforeach()
