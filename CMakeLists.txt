@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  : PHAS0100 Assignment 1 Linear Regression
+#  PHAS0100ASSIGNMENT1: PHAS0100 Assignment 1 Linear Regression
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -15,8 +15,8 @@
 ######################################################################
 # Set the minimum CMake version.
 ######################################################################
-set(_CMAKE_MINIMUM_REQUIRED_VERSION 3.5)
-cmake_minimum_required(VERSION ${_CMAKE_MINIMUM_REQUIRED_VERSION})
+set(PHAS0100ASSIGNMENT1_CMAKE_MINIMUM_REQUIRED_VERSION 3.5)
+cmake_minimum_required(VERSION ${PHAS0100ASSIGNMENT1_CMAKE_MINIMUM_REQUIRED_VERSION})
 
 
 ###################################################################################
@@ -34,7 +34,7 @@ endforeach()
 ###############################################################################
 # Setup project name, and version.
 ###############################################################################
-project( VERSION 0.0.0)
+project(PHAS0100ASSIGNMENT1 VERSION 0.0.0)
 
 
 ######################################################################
@@ -87,20 +87,20 @@ endif()
 ######################################################################
 # Choose C++ standard. Currently 11, as we try to support VS2013.
 ######################################################################
-set(_CXX_STANDARD 11)
+set(PHAS0100ASSIGNMENT1_CXX_STANDARD 11)
 set(CMAKE_CXX_EXTENSIONS 0)
-set(CMAKE_CXX_STANDARD ${_CXX_STANDARD})
+set(CMAKE_CXX_STANDARD ${PHAS0100ASSIGNMENT1_CXX_STANDARD})
 set(CMAKE_CXX_STANDARD_REQUIRED 1)
 
 # This is necessary to avoid problems with compile feature checks.
 # CMAKE_CXX_STANDARD seems to only set the -std=c++11 flag for targets.
 # However, compile flag checks also need to be done with -std=c++11.
-# The _CXX11_FLAG variable is also used for external projects
-# build during the  super-build.
-mitkFunctionCheckCompilerFlags("-std=c++11" _CXX11_FLAG)
-if(NOT _CXX11_FLAG)
+# The PHAS0100ASSIGNMENT1_CXX11_FLAG variable is also used for external projects
+# build during the PHAS0100ASSIGNMENT1 super-build.
+mitkFunctionCheckCompilerFlags("-std=c++11" PHAS0100ASSIGNMENT1_CXX11_FLAG)
+if(NOT PHAS0100ASSIGNMENT1_CXX11_FLAG)
   # Older gcc compilers use -std=c++0x
-  mitkFunctionCheckCompilerFlags("-std=c++0x" _CXX11_FLAG)
+  mitkFunctionCheckCompilerFlags("-std=c++0x" PHAS0100ASSIGNMENT1_CXX11_FLAG)
 endif()
 
 
@@ -157,13 +157,13 @@ if(WIN32)
 endif(WIN32)
 
 if(WIN32 AND NOT BUILD_SHARED_LIBS)
-  add_definitions(-D_STATIC)
+  add_definitions(-DPHAS0100ASSIGNMENT1_STATIC)
 endif()
 
 if(UNIX)
-  mitkFunctionCheckCompilerFlags("-Wno-deprecated-declarations" _NO_DEPRECATED_FLAG)
-  if(_NO_DEPRECATED_FLAG)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${_NO_DEPRECATED_FLAG}" CACHE STRING "FLags used by the compiler during all build types." FORCE)
+  mitkFunctionCheckCompilerFlags("-Wno-deprecated-declarations" PHAS0100ASSIGNMENT1_NO_DEPRECATED_FLAG)
+  if(PHAS0100ASSIGNMENT1_NO_DEPRECATED_FLAG)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${PHAS0100ASSIGNMENT1_NO_DEPRECATED_FLAG}" CACHE STRING "FLags used by the compiler during all build types." FORCE)
   endif()
 endif()
 
@@ -171,17 +171,17 @@ endif()
 ######################################################################
 # A few shortcuts for lists of libraries.
 ######################################################################
-set(_LIBRARIES )
-set(ALL_LIBRARIES ${_LIBRARIES})
+set(PHAS0100ASSIGNMENT1_LIBRARIES phas0100assignment1)
+set(ALL_LIBRARIES ${PHAS0100ASSIGNMENT1_LIBRARIES})
 
 
 ######################################################################
 # Set up a few paths.
 ######################################################################
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
-set(_INSTALL_LIB_DIR lib)
-set(_INSTALL_INC_DIR include)
-set(_INSTALL_BIN_DIR bin)
+set(PHAS0100ASSIGNMENT1_INSTALL_LIB_DIR lib)
+set(PHAS0100ASSIGNMENT1_INSTALL_INC_DIR include)
+set(PHAS0100ASSIGNMENT1_INSTALL_BIN_DIR bin)
 
 foreach(type LIBRARY RUNTIME ARCHIVE)
   set(output_dir ${CMAKE_BINARY_DIR}/bin)

@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  : PHAS0100 Assignment 1 Linear Regression
+#  PHAS0100ASSIGNMENT1: PHAS0100 Assignment 1 Linear Regression
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #

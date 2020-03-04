@@ -1,6 +1,6 @@
 /*=============================================================================
 
-  : PHAS0100 Assignment 1 Linear Regression
+  PHAS0100ASSIGNMENT1: PHAS0100 Assignment 1 Linear Regression
 
   Copyright (c) University College London (UCL). All rights reserved.
 
@@ -27,7 +27,7 @@ namespace lrg {
 * \brief Base exception class.
 * \ingroup types
 */
-class _WINEXPORT Exception : public std::exception
+class PHAS0100ASSIGNMENT1_WINEXPORT Exception : public std::exception
 {
 public:
 

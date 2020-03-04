@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  : PHAS0100 Assignment 1 Linear Regression
+#  PHAS0100ASSIGNMENT1: PHAS0100 Assignment 1 Linear Regression
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -22,7 +22,7 @@ set(TEST_CASES
 
 foreach(_test_case ${TEST_CASES})
   add_executable(${_test_case} ${_test_case}.cpp lrgCatchMain.cpp)
-  target_link_libraries(${_test_case} ${_LIBRARIES} ${ALL_THIRD_PARTY_LIBRARIES})
+  target_link_libraries(${_test_case} ${PHAS0100ASSIGNMENT1_LIBRARIES} ${ALL_THIRD_PARTY_LIBRARIES})
 endforeach()
 
 # Adding tests is done outside the above loop,

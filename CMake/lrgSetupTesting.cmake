@@ -1,6 +1,6 @@
 #/*============================================================================
 #
-#  : PHAS0100 Assignment 1 Linear Regression
+#  PHAS0100ASSIGNMENT1: PHAS0100 Assignment 1 Linear Regression
 #
 #  Copyright (c) University College London (UCL). All rights reserved.
 #
@@ -23,7 +23,7 @@ mark_as_advanced(TCL_TCLSH DART_ROOT)
 enable_testing()
 
 if(BUILD_TESTING)
-  set(BUILDNAME "" CACHE STRING "Name of build on the dashboard")
+  set(BUILDNAME "PHAS0100ASSIGNMENT1" CACHE STRING "Name of build on the dashboard")
   mark_as_advanced(BUILDNAME)
   configure_file(CMake/CTestCustom.cmake.in ${CMAKE_BINARY_DIR}/CTestCustom.cmake @ONLY)
   configure_file(CMake/CTestContinuous.cmake.in ${CMAKE_BINARY_DIR}/CTestContinuous.cmake @ONLY)
