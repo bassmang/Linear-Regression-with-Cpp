@@ -1,12 +1,14 @@
 #include "catch.hpp"
 #include "lrgLinearDataCreator.h"
+#include "lrgNormalEquationSolverStrategy.h"
 #include <iostream>
 #include <vector>
 #include <cmath>
 
-TEST_CASE( "Test instantiate an instance of your new concrete class" ) {
-	DataCreator d(1, 1, 1);
-	REQUIRE( 1 == 1 );
+TEST_CASE( "Test instantiating an instance of data generation" ) {
+	DataCreator d(1, 1, 1); // Test simple instantiation
+	d.GetData(); // Test function works
+	REQUIRE( 1 == 1 ); // Make naive assertion
 }
 
 TEST_CASE( "Test number and distribution from GetData function" ) {
@@ -40,3 +42,16 @@ TEST_CASE( "Test number and distribution from GetData function" ) {
 	REQUIRE( x_err < .001 );
 	REQUIRE( y_err < .001 );
 }
+
+TEST_CASE( "Test instantiating an instance of solver class" ) {
+	// Generate random data
+	DataCreator d(1, 1, 1);
+	vector<pair <double, double> > points = d.GetData();
+	// Check that solver can be instantiated
+	Solver s;
+	// Check that fit function works
+	s.FitData(points);
+	REQUIRE( 1 == 1 ); // Make naive assertion
+}
+
+
