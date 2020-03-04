@@ -5,7 +5,9 @@
 
 class DataCreator:public DataCreatorBase {
 public:
-	DataCreator();
+	double theta0;
+	double theta1;
+	DataCreator(double theta0, double theta1);
 	vector<pair <double, double> > GetData();
 };
 
