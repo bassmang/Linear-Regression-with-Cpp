@@ -2,9 +2,10 @@
 #include<iostream>
 #include<random>
 
-DataCreator::DataCreator(double t0, double t1) {
+DataCreator::DataCreator(double t0, double t1, int n) {
 	theta0 = t0;
 	theta1 = t1;
+	n_points = n;
 }
 
 vector<pair <double, double> > DataCreator::GetData() {
@@ -13,7 +14,6 @@ vector<pair <double, double> > DataCreator::GetData() {
 	std::default_random_engine generator;
 	std::uniform_real_distribution<double> x_dist(0,10);
 	std::uniform_real_distribution<double> noise_dist(-1,1);
-	int n_points = 100; // Set number of generated points
 	vector<pair <double, double> > data_points; // Initialize return vector
 	// Loop through and generate a new x and noise point. Use these
 	// to calculate y, along with theta1 and theta0. Append the results
