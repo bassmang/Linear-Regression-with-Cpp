@@ -39,8 +39,8 @@ TEST_CASE( "Test number and distribution from GetData function" ) {
 	double x_err = abs(x_exp - (x_sum / n_points));
 	double y_err = abs(y_exp - (y_sum / n_points));
 	// Require both errors to be small to ensure function works properly
-	REQUIRE( x_err < .001 );
-	REQUIRE( y_err < .001 );
+	REQUIRE( x_err < .01 );
+	REQUIRE( y_err < .01 );
 }
 
 TEST_CASE( "Test instantiating an instance of solver class" ) {
