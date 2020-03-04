@@ -54,4 +54,62 @@ TEST_CASE( "Test instantiating an instance of solver class" ) {
 	REQUIRE( 1 == 1 ); // Make naive assertion
 }
 
+TEST_CASE( "Test Normal Equation with generated data both positive values" ) {
+	// Set random values for theta0, theta1, and number of points
+	double theta0 = 50.0;
+	double theta1 = 0.5;
+	double n_points = 1000000;
+	// Generate data
+	DataCreator d(theta0, theta1, n_points);
+	vector<pair <double, double> > points = d.GetData();
+	Solver s; // Instantiate solver
+	// Solve for thetas using normal equation
+	pair<double, double> norm_thetas = s.FitData(points);
+	// Find difference in real theta values in those computed through
+	// normal equation
+	double theta0_err = abs(theta0 - norm_thetas.first);
+	double theta1_err = abs(theta1 - norm_thetas.second);
+	// Assert that these values are very close
+	REQUIRE( theta0_err < .01 );
+	REQUIRE( theta1_err < .01 );
+}
 
+TEST_CASE( "Test Normal Equation with generated data both negative values" ) {
+	// Set random values for theta0, theta1, and number of points
+	double theta0 = -10.0;
+	double theta1 = -2.5;
+	double n_points = 1000000;
+	// Generate data
+	DataCreator d(theta0, theta1, n_points);
+	vector<pair <double, double> > points = d.GetData();
+	Solver s; // Instantiate solver
+	// Solve for thetas using normal equation
+	pair<double, double> norm_thetas = s.FitData(points);
+	// Find difference in real theta values in those computed through
+	// normal equation
+	double theta0_err = abs(theta0 - norm_thetas.first);
+	double theta1_err = abs(theta1 - norm_thetas.second);
+	// Assert that these values are very close
+	REQUIRE( theta0_err < .01 );
+	REQUIRE( theta1_err < .01 );
+}
+
+TEST_CASE( "Test Normal Equation with generated data both 0 values" ) {
+	// Set random values for theta0, theta1, and number of points
+	double theta0 = 0.0;
+	double theta1 = 0.0;
+	double n_points = 1000000;
+	// Generate data
+	DataCreator d(theta0, theta1, n_points);
+	vector<pair <double, double> > points = d.GetData();
+	Solver s; // Instantiate solver
+	// Solve for thetas using normal equation
+	pair<double, double> norm_thetas = s.FitData(points);
+	// Find difference in real theta values in those computed through
+	// normal equation
+	double theta0_err = abs(theta0 - norm_thetas.first);
+	double theta1_err = abs(theta1 - norm_thetas.second);
+	// Assert that these values are very close
+	REQUIRE( theta0_err < .01 );
+	REQUIRE( theta1_err < .01 );
+}
