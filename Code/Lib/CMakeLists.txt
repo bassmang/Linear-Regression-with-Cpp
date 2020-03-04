@@ -19,12 +19,13 @@ set(PHAS0100ASSIGNMENT1_LIBRARY_SRCS
   lrgMyFunctions.cpp
   lrgException.cpp
   lrgLinearDataCreator.cpp
+  lrgNormalEquationSolverStrategy.cpp
 )
 
 set(PHAS0100ASSIGNMENT1_LIBRARY_HDRS
   lrgExceptionMacro.h
   lrgDataCreatorI.h
-  lrgLinearDataCreator.h
+  lrgLinearModelSolverStrategyI.h
 )
 
 add_library(${PHAS0100ASSIGNMENT1_LIBRARY_NAME} ${PHAS0100ASSIGNMENT1_LIBRARY_HDRS} ${PHAS0100ASSIGNMENT1_LIBRARY_SRCS})
