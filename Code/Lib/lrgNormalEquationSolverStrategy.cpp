@@ -1,5 +1,5 @@
 #include "lrgNormalEquationSolverStrategy.h"
-#include "../3rdParty/Eigen-3.2.2.1/Eigen/Dense"
+#include<Eigen/Dense>
 
 using namespace Eigen;
 

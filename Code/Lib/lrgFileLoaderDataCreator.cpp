@@ -4,6 +4,9 @@
 // Open file in constructor
 FileDataCreator::FileDataCreator(string file_name) {
 	infile.open(file_name);
+	if(!infile) {
+		throw runtime_error("Could not open file");
+	}
 }
 
 // Ensure file is closed in destructor
