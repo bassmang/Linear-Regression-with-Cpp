@@ -1,14 +1,15 @@
 #ifndef lrgFileLoaderDataCreator_h
 #define lrgFileLoaderDataCreator_h
 #include <string>
+#include <fstream>
 #include "lrgDataCreatorI.h"
 
 class FileDataCreator:public DataCreatorBase {
 private:
-	string file_name;
+	ifstream infile;
 public:
 	FileDataCreator(string file_name);
-	~FileDataCreator(){};
+	~FileDataCreator();
 	vector<point> GetData();
 };
 

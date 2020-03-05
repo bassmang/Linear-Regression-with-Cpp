@@ -1,12 +1,15 @@
 #include "lrgFileLoaderDataCreator.h"
-#include <fstream>
+#include<iostream>
 
-FileDataCreator::FileDataCreator(string fn) {
-	file_name = fn;
+FileDataCreator::FileDataCreator(string file_name) {
+	infile.open(file_name);
+}
+
+FileDataCreator::~FileDataCreator() {
+	infile.close();
 }
 
 vector<point> FileDataCreator::GetData() {
-	ifstream infile(file_name); // Open stream to file
 	vector<point> data_points; // Initialize return vector
 	double x, y; // Initialize variables to hold x and y
 	// Parse through pairs in file
@@ -14,5 +17,6 @@ vector<point> FileDataCreator::GetData() {
 		point p(x, y); // Create point from x and y
     	data_points.push_back(p); // Add point to vector
 	}
+	infile.close();
 	return data_points;
 }
