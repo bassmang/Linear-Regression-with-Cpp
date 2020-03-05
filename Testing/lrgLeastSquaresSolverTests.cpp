@@ -18,7 +18,7 @@ TEST_CASE( "Test number and distribution from GetData function" ) {
 	double n_points = 1000000;
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
-	vector<pair <double, double> > points = d.GetData();
+	vector<point> points = d.GetData();
 	// Variables to store total sum over x and y
 	double x_sum = 0;
 	double y_sum = 0;
@@ -46,7 +46,7 @@ TEST_CASE( "Test number and distribution from GetData function" ) {
 TEST_CASE( "Test instantiating an instance of solver class" ) {
 	// Generate random data
 	DataCreator d(1, 1, 1);
-	vector<pair <double, double> > points = d.GetData();
+	vector<point> points = d.GetData();
 	// Check that solver can be instantiated
 	NormalSolver s;
 	// Check that fit function works
@@ -61,10 +61,10 @@ TEST_CASE( "Test Normal Equation with generated data both positive values" ) {
 	double n_points = 1000000;
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
-	vector<pair <double, double> > points = d.GetData();
+	vector<point> points = d.GetData();
 	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
-	pair<double, double> norm_thetas = s.FitData(points);
+	point norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through
 	// normal equation
 	double theta0_err = abs(theta0 - norm_thetas.first);
@@ -81,10 +81,10 @@ TEST_CASE( "Test Normal Equation with generated data both negative values" ) {
 	double n_points = 1000000;
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
-	vector<pair <double, double> > points = d.GetData();
+	vector<point> points = d.GetData();
 	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
-	pair<double, double> norm_thetas = s.FitData(points);
+	point norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through
 	// normal equation
 	double theta0_err = abs(theta0 - norm_thetas.first);
@@ -101,10 +101,10 @@ TEST_CASE( "Test Normal Equation with generated data both 0 values" ) {
 	double n_points = 1000000;
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
-	vector<pair <double, double> > points = d.GetData();
+	vector<point> points = d.GetData();
 	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
-	pair<double, double> norm_thetas = s.FitData(points);
+	point norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through
 	// normal equation
 	double theta0_err = abs(theta0 - norm_thetas.first);

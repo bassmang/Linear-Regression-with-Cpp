@@ -7,7 +7,7 @@ class NormalSolver:public SolverBase {
 public:
 	NormalSolver();
 	~NormalSolver(){};
-	pair<double, double> FitData(vector<pair<double, double> >);
+	point FitData(vector<point>);
 };
 
 #endif

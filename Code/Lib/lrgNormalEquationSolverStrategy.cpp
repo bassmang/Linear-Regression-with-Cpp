@@ -6,7 +6,7 @@ using namespace Eigen;
 
 NormalSolver::NormalSolver() { }
 
-pair<double, double> NormalSolver::FitData(const vector<pair<double, double> > points) {
+point NormalSolver::FitData(vector<point> points) {
 	Matrix<double,Dynamic,2> X(points.size(),2); // Create matrix to hold X
 	Matrix<double,Dynamic,1> y(points.size(),1); // Create matrix to hold Y
 	// Copy points over to each of the matrices. Set the first column of X to all
@@ -19,5 +19,5 @@ pair<double, double> NormalSolver::FitData(const vector<pair<double, double> > p
 	// Get thetas by performing Normal Equation
 	Matrix<double,2,1> thetas = (X.transpose() * X).inverse() * X.transpose() * y;
 	// Return thetas as a pair of both theta values
-	return pair <double,double>(thetas(0,0), thetas(1,0));;
+	return point(thetas(0,0), thetas(1,0));;
 }

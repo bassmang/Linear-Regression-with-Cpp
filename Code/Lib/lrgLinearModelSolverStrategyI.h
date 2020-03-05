@@ -1,12 +1,12 @@
 #ifndef lrgLinearModelSolverStrategyI_h
 #define lrgLinearModelSolverStrategyI_h
-
 #include<vector>
 using namespace std;
+typedef pair<double, double> point;
 
 class SolverBase {
 	public:
-		virtual pair<double, double> FitData(vector<pair<double, double> >) = 0;
+		virtual point FitData(vector<point>) = 0;
 };
 
 #endif

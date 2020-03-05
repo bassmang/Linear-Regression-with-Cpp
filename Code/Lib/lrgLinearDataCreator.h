@@ -11,7 +11,7 @@ private:
 public:
 	DataCreator(double theta0, double theta1, int n_points);
 	~DataCreator(){};
-	vector<pair <double, double> > GetData();
+	vector<point> GetData();
 };
 
 #endif

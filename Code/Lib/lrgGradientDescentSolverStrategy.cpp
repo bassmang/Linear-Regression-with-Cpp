@@ -11,7 +11,7 @@ GradientSolver::GradientSolver(int iters, double lr, double t0_guess, double t1_
 	theta1_init = t1_guess;
 }
 
-pair<double, double> GradientSolver::FitData(vector<pair<double, double> > points) {
+point GradientSolver::FitData(vector<point> points) {
 	int n = points.size(); // Define number of points
 	double theta0 = theta0_init; // Initialize theta0
 	double theta1 = theta1_init; // Initialize theta1
@@ -33,5 +33,5 @@ pair<double, double> GradientSolver::FitData(vector<pair<double, double> > point
 		theta0 -= alpha*d_theta0;
 		theta1 -= alpha*d_theta1;
 	}
-	return pair <double,double>(theta0, theta1);;
+	return point(theta0, theta1);;
 }

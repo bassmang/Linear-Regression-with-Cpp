@@ -8,13 +8,13 @@ DataCreator::DataCreator(double t0, double t1, int n) {
 	n_points = n;
 }
 
-vector<pair <double, double> > DataCreator::GetData() {
+vector<point> DataCreator::GetData() {
 	// Set up random generator with x distribution from 0 to 0
 	// and the noise distribution from -1 to 1.
 	std::default_random_engine generator;
 	std::uniform_real_distribution<double> x_dist(0,10);
 	std::uniform_real_distribution<double> noise_dist(-1,1);
-	vector<pair <double, double> > data_points; // Initialize return vector
+	vector<point> data_points; // Initialize return vector
 	// Loop through and generate a new x and noise point. Use these
 	// to calculate y, along with theta1 and theta0. Append the results
 	// the the result vector.
@@ -22,7 +22,7 @@ vector<pair <double, double> > DataCreator::GetData() {
 		double x = x_dist(generator);
 		double noise = noise_dist(generator);
 		double y = theta1*x + theta0 + noise;
-		pair <double,double> p(x, y);
+		point p(x, y);
 		data_points.push_back(p);
 	}
 	return data_points; 
