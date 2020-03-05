@@ -12,7 +12,7 @@ private:
 public:
 	GradientSolver(int epochs, double alpha, double theta0_init, double theta1_init);
 	~GradientSolver(){};
-	pair<double, double> FitData(vector<pair<double, double> >);
+	point FitData(vector<point>);
 };
 
 #endif

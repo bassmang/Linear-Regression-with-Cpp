@@ -20,6 +20,7 @@ set(PHAS0100ASSIGNMENT1_LIBRARY_SRCS
   lrgException.cpp
   lrgLinearDataCreator.cpp
   lrgNormalEquationSolverStrategy.cpp
+  lrgGradientDescentSolverStrategy.cpp
 )
 
 set(PHAS0100ASSIGNMENT1_LIBRARY_HDRS
