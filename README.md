@@ -50,4 +50,5 @@ Additionally, this directory contains a executable to run all of my tests. To ru
 ```
 ./lrgLeastSquaresSolverTests
 ```
+Please check out the file Screenshot_of_test_results.pdf on the cover to see some example commands and expected output. 
 Enjoy!
