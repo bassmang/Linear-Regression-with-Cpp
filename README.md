@@ -1,37 +1,49 @@
-PHAS0100Assignment1
+PHAS0100Assignment1 Linear Regression
 ------------------
-
-[![Build Status](https://travis-ci.com/MattClarkson/PHAS0100Assignment1.svg?branch=master)](https://travis-ci.com/MattClarkson/PHAS0100Assignment1)
-[![Build Status](https://ci.appveyor.com/api/projects/status/5pm89ej732c1ekf0/branch/master)](https://ci.appveyor.com/project/MattClarkson/cmakecatch2)
-
 
 Purpose
 -------
 
-This is a demo project to demonstrate a reasonable folder structure for [CMake](https://cmake.org/) based projects,
-that use [CTest](https://cmake.org/) to run unit tests via [Catch](https://github.com/catchorg/Catch2).
+The purpose of this project is to solve a linear regression of the form:
 
+y = theta1*x + theta0
+
+Given a text document which contains a column of x values, and a column of y values.
 
 Credits
 -------
 
-This project was developed as a teaching aid for UCL's ["Research Computing with C++"](http://rits.github-pages.ucl.ac.uk/research-computing-with-cpp/)
-course developed by [Dr. James Hetherington](http://www.ucl.ac.uk/research-it-services/people/james)
-and [Dr. Matt Clarkson](https://iris.ucl.ac.uk/iris/browse/profile?upi=MJCLA42).
+This project was developed by Griffin Bassman.
 
 Build Instructions
 ------------------
 
-This project itself can be built if you just want to test it. In Linux terms that
-would be:
-``` cmake
-git clone https://github.com/MattClarkson/PHAS0100Assignment1
+This project itself can be built in Linux with the following:
+```
+git clone https://github.com/bassmang/PHAS0100Assignment1/
 mkdir PHAS0100Assignment1-Build
 cd PHAS0100Assignment1-Build
 cmake ../PHAS0100Assignment1
 make
 ```
-But ideally, you should use this as a template to create your own project. To do so,
-please refer to the [CMakeTemplateRenamer](https://github.com/MattClarkson/CMakeTemplateRenamer)
-which will show you how to clone this repository, and rename all the variables to names of your choice.
-Then you would simply build your new project, using cmake, as shown above.
+
+How to Use
+------------------
+
+Once the project has been properly built and you are in the PHAS0100Assignment1-Build directory, type:
+```
+cd bin
+```
+In order to get in the same directory as the app. In this directory, you will find two files, TestData1.txt and TestData2.txt which are sample files to perform a linear regression. You can either perform a linear regression using the normal equation or gradient descent. If you would like the use the normal equation, type:
+```
+./lrgLinReg -n [file_name.txt]
+```
+If you would like to use the gradient descent method, type:
+```
+./lrgLinReg -g [file_name.txt] [epochs] [learning_rate] [theta0_guess] [theta1_guess]
+```
+Where [epochs] specifies the number of iterations, [learning_rate] specifies the learning rate of the algorithm, and [theta0_guess] and [theta1_guess] specify initial values for these parameter. If you would like more details please type:
+```
+./lrgLinReg [-h/--help]
+```
+Enjoy!
