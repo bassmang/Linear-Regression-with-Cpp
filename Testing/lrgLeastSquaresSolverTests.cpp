@@ -206,7 +206,6 @@ TEST_CASE( "Test Gradient Descent with generated data both 0 thetas" ) {
 }
 
 TEST_CASE( "Test loading data from TestData1.txt" ) {
-	system("PWD");
 	string file_name = "TestData1.txt";
 	FileDataCreator d(file_name);
 	vector<point> points = d.GetData();

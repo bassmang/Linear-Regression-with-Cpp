@@ -12,7 +12,7 @@
 #
 #============================================================================*/
 
-add_subdirectory(DATA)
+add_subdirectory(Data)
 
 set(DATA_DIR ${CMAKE_SOURCE_DIR}/Testing/Data)
 set(TMP_DIR ${CMAKE_BINARY_DIR}/Testing/Temporary)

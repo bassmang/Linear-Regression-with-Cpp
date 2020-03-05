@@ -2,6 +2,8 @@
 #include <lrgNormalEquationSolverStrategy.h>
 #include <lrgGradientDescentSolverStrategy.h>
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 
 // Message to send if function goes wrong or help flag is used
 void help_message() {
