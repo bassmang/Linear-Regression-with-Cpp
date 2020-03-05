@@ -15,9 +15,6 @@
 set(PHAS0100ASSIGNMENT1_LIBRARY_NAME phas0100assignment1)
 
 set(PHAS0100ASSIGNMENT1_LIBRARY_SRCS
-  lrgBasicTypes.cpp
-  lrgMyFunctions.cpp
-  lrgException.cpp
   lrgLinearDataCreator.cpp
   lrgFileLoaderDataCreator.cpp
   lrgNormalEquationSolverStrategy.cpp
@@ -25,7 +22,6 @@ set(PHAS0100ASSIGNMENT1_LIBRARY_SRCS
 )
 
 set(PHAS0100ASSIGNMENT1_LIBRARY_HDRS
-  lrgExceptionMacro.h
   lrgDataCreatorI.h
   lrgLinearModelSolverStrategyI.h
 )

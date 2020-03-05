@@ -19,8 +19,6 @@ set(TMP_DIR ${CMAKE_BINARY_DIR}/Testing/Temporary)
 
 set(TEST_CASES
   lrgLeastSquaresSolverTests
-  lrgBasicTest
-  lrgCommandLineArgsTest
 )
 
 foreach(_test_case ${TEST_CASES})
