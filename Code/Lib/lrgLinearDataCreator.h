@@ -10,7 +10,7 @@ private:
 	int n_points;
 public:
 	DataCreator(double theta0, double theta1, int n_points);
-	~DataCreator(){};
+	~DataCreator();
 	vector<point> GetData();
 };
 

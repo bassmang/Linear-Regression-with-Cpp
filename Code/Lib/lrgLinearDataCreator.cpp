@@ -7,6 +7,8 @@ DataCreator::DataCreator(double t0, double t1, int n) {
 	n_points = n;
 }
 
+DataCreator::~DataCreator() { }
+
 vector<point> DataCreator::GetData() {
 	// Set up random generator with x distribution from 0 to 0
 	// and the noise distribution from -1 to 1.

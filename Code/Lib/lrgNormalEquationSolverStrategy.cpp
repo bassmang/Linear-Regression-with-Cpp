@@ -5,6 +5,8 @@ using namespace Eigen;
 
 NormalSolver::NormalSolver() { }
 
+NormalSolver::~NormalSolver() { }
+
 point NormalSolver::FitData(vector<point> points) {
 	Matrix<double,Dynamic,2> X(points.size(),2); // Create matrix to hold X
 	Matrix<double,Dynamic,1> y(points.size(),1); // Create matrix to hold Y

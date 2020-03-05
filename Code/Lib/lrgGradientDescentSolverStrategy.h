@@ -1,6 +1,5 @@
 #ifndef lrgGradientDescentSolverStrategy_h
 #define lrgGradientDescentSolverStrategy_h
-
 #include "lrgLinearModelSolverStrategyI.h"
 
 class GradientSolver:public SolverBase {
@@ -11,7 +10,7 @@ private:
 	double theta1_init; // Initial guess of theta1
 public:
 	GradientSolver(int epochs, double alpha, double theta0_init, double theta1_init);
-	~GradientSolver(){};
+	~GradientSolver();
 	point FitData(vector<point>);
 };
 

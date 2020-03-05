@@ -10,6 +10,8 @@ GradientSolver::GradientSolver(int iters, double lr, double t0_guess, double t1_
 	theta1_init = t1_guess;
 }
 
+GradientSolver::~GradientSolver() { };
+
 point GradientSolver::FitData(vector<point> points) {
 	int n = points.size(); // Define number of points
 	double theta0 = theta0_init; // Initialize theta0

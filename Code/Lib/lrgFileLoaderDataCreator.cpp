@@ -1,10 +1,12 @@
 #include "lrgFileLoaderDataCreator.h"
 #include<iostream>
 
+// Open file in constructor
 FileDataCreator::FileDataCreator(string file_name) {
 	infile.open(file_name);
 }
 
+// Ensure file is closed in destructor
 FileDataCreator::~FileDataCreator() {
 	infile.close();
 }

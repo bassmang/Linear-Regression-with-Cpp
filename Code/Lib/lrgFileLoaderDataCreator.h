@@ -6,7 +6,7 @@
 
 class FileDataCreator:public DataCreatorBase {
 private:
-	ifstream infile;
+	ifstream infile; // File to read from
 public:
 	FileDataCreator(string file_name);
 	~FileDataCreator();
