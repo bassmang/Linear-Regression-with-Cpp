@@ -204,3 +204,26 @@ TEST_CASE( "Test Gradient Descent with generated data both 0 thetas" ) {
 	REQUIRE( theta0_err < .01 );
 	REQUIRE( theta1_err < .01 );
 }
+
+TEST_CASE( "Test loading data from TestData1.txt" ) {
+	system("PWD");
+	string file_name = "../Testing/Data/TestData1.txt";
+	FileDataCreator d(file_name);
+	vector<point> points = d.GetData();
+	REQUIRE( (points.size() == 1000) ); // Test size
+	REQUIRE( points[0].first == 0.170065 ); // Test first x
+	REQUIRE( points[0].second == 3.38151 ); // Test first y
+	REQUIRE( points[points.size() - 1].first == 1.04707 ); // Test last x
+	REQUIRE( points[points.size() - 1].second == 5.42941 ); // Test last y
+}
+
+TEST_CASE( "Test loading data from TestData2.txt" ) {
+	string file_name = "../Testing/Data/TestData2.txt";
+	FileDataCreator d(file_name);
+	vector<point> points = d.GetData();
+	REQUIRE( points.size() == 1000 ); // Test size
+	REQUIRE( points[0].first == 0.170065 ); // Test first x
+	REQUIRE( points[0].second == 2.55157 ); // Test first y
+	REQUIRE( points[points.size() - 1].first == 1.04707 ); // Test last x
+	REQUIRE( points[points.size() - 1].second == 5.47648 ); // Test last y
+}
