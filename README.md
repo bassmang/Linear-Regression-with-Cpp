@@ -46,4 +46,8 @@ Where [epochs] specifies the number of iterations, [learning_rate] specifies the
 ```
 ./lrgLinReg [-h/--help]
 ```
+Additionally, this directory contains a executable to run all of my tests. To run this type:
+```
+./lrgLeastSquaresSolverTests
+```
 Enjoy!
