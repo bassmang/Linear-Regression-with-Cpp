@@ -4,11 +4,13 @@
 #include "lrgDataCreatorI.h"
 
 class DataCreator:public DataCreatorBase {
-public:
+private:
 	double theta0;
 	double theta1;
 	int n_points;
+public:
 	DataCreator(double theta0, double theta1, int n_points);
+	~DataCreator(){};
 	vector<pair <double, double> > GetData();
 };
 

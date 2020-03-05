@@ -6,6 +6,7 @@
 class Solver:public SolverBase {
 public:
 	Solver();
+	~Solver(){};
 	pair<double, double> FitData(vector<pair<double, double> >);
 };
 
