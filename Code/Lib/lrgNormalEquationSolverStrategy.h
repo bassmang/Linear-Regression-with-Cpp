@@ -3,10 +3,10 @@
 
 #include "lrgLinearModelSolverStrategyI.h"
 
-class Solver:public SolverBase {
+class NormalSolver:public SolverBase {
 public:
-	Solver();
-	~Solver(){};
+	NormalSolver();
+	~NormalSolver(){};
 	pair<double, double> FitData(vector<pair<double, double> >);
 };
 

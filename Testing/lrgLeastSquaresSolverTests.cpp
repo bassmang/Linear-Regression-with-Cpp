@@ -48,7 +48,7 @@ TEST_CASE( "Test instantiating an instance of solver class" ) {
 	DataCreator d(1, 1, 1);
 	vector<pair <double, double> > points = d.GetData();
 	// Check that solver can be instantiated
-	Solver s;
+	NormalSolver s;
 	// Check that fit function works
 	s.FitData(points);
 	REQUIRE( 1 == 1 ); // Make naive assertion
@@ -62,7 +62,7 @@ TEST_CASE( "Test Normal Equation with generated data both positive values" ) {
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
 	vector<pair <double, double> > points = d.GetData();
-	Solver s; // Instantiate solver
+	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
 	pair<double, double> norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through
@@ -82,7 +82,7 @@ TEST_CASE( "Test Normal Equation with generated data both negative values" ) {
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
 	vector<pair <double, double> > points = d.GetData();
-	Solver s; // Instantiate solver
+	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
 	pair<double, double> norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through
@@ -102,7 +102,7 @@ TEST_CASE( "Test Normal Equation with generated data both 0 values" ) {
 	// Generate data
 	DataCreator d(theta0, theta1, n_points);
 	vector<pair <double, double> > points = d.GetData();
-	Solver s; // Instantiate solver
+	NormalSolver s; // Instantiate solver
 	// Solve for thetas using normal equation
 	pair<double, double> norm_thetas = s.FitData(points);
 	// Find difference in real theta values in those computed through

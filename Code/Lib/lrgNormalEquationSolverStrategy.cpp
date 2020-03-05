@@ -4,9 +4,9 @@
 
 using namespace Eigen;
 
-Solver::Solver() { }
+NormalSolver::NormalSolver() { }
 
-pair<double, double> Solver::FitData(const vector<pair<double, double> > points) {
+pair<double, double> NormalSolver::FitData(const vector<pair<double, double> > points) {
 	Matrix<double,Dynamic,2> X(points.size(),2); // Create matrix to hold X
 	Matrix<double,Dynamic,1> y(points.size(),1); // Create matrix to hold Y
 	// Copy points over to each of the matrices. Set the first column of X to all
