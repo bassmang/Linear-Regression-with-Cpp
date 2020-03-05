@@ -1,5 +1,4 @@
 #include "lrgLinearDataCreator.h"
-#include<iostream>
 #include<random>
 
 DataCreator::DataCreator(double t0, double t1, int n) {
