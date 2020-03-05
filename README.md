@@ -18,8 +18,7 @@ This project was developed by Griffin Bassman.
 Build Instructions
 ------------------
 
-This project itself can be built if you just want to test it. In Linux terms that
-would be:
+This project itself can be built in Linux with the following:
 ```
 git clone https://github.com/bassmang/PHAS0100Assignment1/
 mkdir PHAS0100Assignment1-Build
@@ -47,3 +46,4 @@ Where [epochs] specifies the number of iterations, [learning_rate] specifies the
 ```
 ./lrgLinReg [-h/--help]
 ```
+Enjoy!
