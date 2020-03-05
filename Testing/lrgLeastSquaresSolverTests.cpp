@@ -207,7 +207,7 @@ TEST_CASE( "Test Gradient Descent with generated data both 0 thetas" ) {
 
 TEST_CASE( "Test loading data from TestData1.txt" ) {
 	system("PWD");
-	string file_name = "../Testing/Data/TestData1.txt";
+	string file_name = "TestData1.txt";
 	FileDataCreator d(file_name);
 	vector<point> points = d.GetData();
 	REQUIRE( (points.size() == 1000) ); // Test size
@@ -218,7 +218,7 @@ TEST_CASE( "Test loading data from TestData1.txt" ) {
 }
 
 TEST_CASE( "Test loading data from TestData2.txt" ) {
-	string file_name = "../Testing/Data/TestData2.txt";
+	string file_name = "TestData2.txt";
 	FileDataCreator d(file_name);
 	vector<point> points = d.GetData();
 	REQUIRE( points.size() == 1000 ); // Test size
