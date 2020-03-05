@@ -1,5 +1,6 @@
 #include "catch.hpp"
 #include "lrgLinearDataCreator.h"
+#include "lrgFileLoaderDataCreator.h"
 #include "lrgNormalEquationSolverStrategy.h"
 #include "lrgGradientDescentSolverStrategy.h"
 #include <iostream>
