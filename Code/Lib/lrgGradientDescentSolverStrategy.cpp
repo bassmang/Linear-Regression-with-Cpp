@@ -4,7 +4,12 @@
 
 using namespace Eigen;
 
-GradientSolver::GradientSolver() { }
+GradientSolver::GradientSolver(int iters, double lr, double t0_guess, double t1_guess) {
+	epochs = iters;
+	alpha = lr;
+	theta0_init = t0_guess;
+	theta1_init = t1_guess;
+}
 
 pair<double, double> GradientSolver::FitData(const vector<pair<double, double> > points) {
 
