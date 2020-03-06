@@ -18,7 +18,16 @@ This project was developed by Griffin Bassman.
 Build Instructions
 ------------------
 
-This project itself can be built in Linux with the following:
+If you would like to build this project from a tar file, please extract PHAS0100Assignment1. From here, open up your terminal and navigate to the same directory that PHAS0100Assignment1 is in and type:
+
+```
+mkdir PHAS0100Assignment1-Build
+cd PHAS0100Assignment1-Build
+cmake ../PHAS0100Assignment1
+make
+```
+
+This project can also be built from github with the following:
 ```
 git clone https://github.com/bassmang/PHAS0100Assignment1/
 mkdir PHAS0100Assignment1-Build
@@ -26,6 +35,7 @@ cd PHAS0100Assignment1-Build
 cmake ../PHAS0100Assignment1
 make
 ```
+At this point, the built project will be in the PHAS0100Assignment1-Build directory.
 
 How to Use
 ------------------
