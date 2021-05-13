@@ -1,6 +1,6 @@
 PHAS0100Assignment1 Linear Regression
 ------------------
- 
+  
 Purpose
 -------
 
